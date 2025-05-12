@@ -288,6 +288,23 @@
         @media #{$lg,$md,$sm,$xs} {
             padding: 20px 0;
         }
+        &.home-6{
+            box-shadow: 0px 1px 3px 0px rgba(35, 18, 4, 0.14);
+            & .main-menu {
+                & > nav{
+                    & > ul {
+                        & > li {
+                            & > a {
+                                padding: 26px 0 24px 0;
+                                &:hover{
+                                    color: var(--tp-theme-9);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         &-category{
             position: relative;
             &:hover {
@@ -304,16 +321,6 @@
                         }
                     }
                 }
-            }
-            &::before {
-                position: absolute;
-                content: '';
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                height: 34px;
-                width: 1px;
-                background: rgba(0, 31, 63, 0.12);
             }
             & p {
                 margin-bottom: 0;
@@ -386,6 +393,22 @@
                     }
                 }
             }
+            &.home-6{
+                & p{
+                    color: var(--tp-theme-9);
+                }
+                & .tp-header-2-category-list {
+                    & ul {
+                        & li {
+                            & a{
+                                &:hover{
+                                    color: var(--tp-theme-9);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         &-search {
             position: relative;
@@ -403,7 +426,7 @@
             & input {
                 border-radius: 8px;
                 height: 42px;
-                width: 280px;
+                width: 260px;
                 padding: 0 40px 0 18px;
                 background-color: #F4F4F3;
                 @include tp-transition();
@@ -589,6 +612,20 @@
                 & button{
                     & i{
                         background-color: var(--tp-theme-secondary);
+                    }
+                }
+            }
+
+            &.home-6{
+                margin-left: 30px;
+                & button{
+                    &:hover{
+                        & span{
+                            color: var(--tp-theme-9);
+                        }
+                    }
+                    & i{
+                        background-color: var(--tp-theme-9);
                     }
                 }
             }
@@ -1293,6 +1330,76 @@
         }
     }
 }
+
+
+
+.#{$theme-prifix}-header {
+    &-6{
+        &-logo{
+            padding-right: 25px;
+            margin-right: 25px;
+            border-right: 1px solid rgba(0, 31, 63, 0.12);
+            @media #{$xs} {
+                margin-right: 0;
+            }
+        }
+        &-login{
+            padding-left: 25px;
+            margin-left: 25px;
+            border-left: 1px solid rgba(0, 31, 63, 0.12);
+            @media #{$lg,$md,$xs} {
+                border: none;
+                padding-left: 0;
+                margin-left: 0;
+            }
+            & button{
+                & span{
+                    color: #656565;
+                    font-size: 16px;
+                    font-weight: 400;
+                    & svg{
+                        transform: translateY(-2px);
+                    }
+                }
+                &:hover{
+                    & span{
+                        color: var(--tp-theme-9);
+                    }
+                }
+            }
+            & img{
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-search{
+            & button{
+                &:hover{
+                    color: var(--tp-theme-9);
+                }
+            }
+        }
+        &-btn{
+            & .tp-btn-inner{
+                font-size: 16px;
+                border-radius: 12px;
+                background-color: var(--tp-theme-9);
+                box-shadow: 0px 1px 2px 0px rgba(20, 56, 181, 0.25), 0px 0px 1px 0px #5956E9;
+                &:hover{
+                    box-shadow: none;
+                }
+                &:focus{
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+    }
+}
+
 
 
 .#{$theme-prifix}-header {

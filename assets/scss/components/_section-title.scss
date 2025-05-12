@@ -83,6 +83,9 @@
             color: var(--tp-theme-secondary);
             font-size: 18px;
             font-weight: 400;
+            &.color-9{
+                color: var(--tp-theme-9);
+            }
         }
         &-title {
             color: var(--tp-heading-2);
@@ -96,6 +99,11 @@
                 position: relative;
                 z-index: 1;
                 display: inline-block;
+            }
+            &.color-9{
+                & span{
+                    color: var(--tp-theme-9);
+                }
             }
         }
     }
@@ -195,6 +203,9 @@
             bottom: -5px;
             left: 55px;
             z-index: -1;
+            @media #{$xs} {
+                width: 100%;
+            }
         }
         &-6 {
             position: absolute;

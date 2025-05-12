@@ -533,6 +533,31 @@
             box-shadow: none;
             background: transparent;
         }
+        & .row{
+            [class*="col-"]{
+                &:nth-last-child(-n+2){
+                    & .tp-megamenu-home-item{
+                        & .tp-megamenu-home-title{
+                            & a{
+                                &::after{
+                                    position: absolute;
+                                    content: 'New';
+                                    right: -50px;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                    border-radius: 100px;
+                                    padding: 2px 8px 3px;
+                                    margin-left: 3px;
+                                    color: var(--tp-common-white);
+                                    background: #E70C46;
+                                    box-shadow: 0px 4px 8px 0px rgba(150, 5, 40, 0.25);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &-home{

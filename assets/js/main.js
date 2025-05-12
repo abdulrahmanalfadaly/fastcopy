@@ -29,6 +29,14 @@
 26. Scroll nav class add
 27. Faq class add
 28. Show more/ Show less js
+29. tp-testimonial-yoga-active
+30. tp-classes-yoga-active
+31. Mouse Custom Cursor
+32. Parallax Js
+33. tp-brands-3-slider-active
+34. tp-courses-chef-active
+35. tp-testimonial-chef-active
+36. tp-brands-quran-slider-active
 ****************************************************/
 
 (function ($) {
@@ -465,6 +473,79 @@
 			prevEl: ".tp-team-2-prev",
 		},
 		breakpoints: {
+			'1200': {
+				slidesPerView: 4,
+			},
+			'992': {
+				slidesPerView: 3,
+			},
+			'768': {
+				slidesPerView: 2,
+			},
+			'576': {
+				slidesPerView: 2,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
+
+
+	// home Six
+	var slider = new Swiper('.tp-team-6-active', {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: ".tp-team-2-next",
+			prevEl: ".tp-team-2-prev",
+		},
+		breakpoints: {
+			'1400': {
+				slidesPerView: 3,
+			},
+			'1200': {
+				slidesPerView: 2.5,
+			},
+			'992': {
+				slidesPerView: 2.2,
+			},
+			'768': {
+				slidesPerView: 1,
+			},
+			'576': {
+				slidesPerView: 2,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
+
+
+	// home Six
+	var slider = new Swiper('.tp-testimonial-6-active', {
+		loop: true,
+		freemode: true,
+		slidesPerView: 'auto',
+		spaceBetween: 15,
+		centeredSlides: true,
+		allowTouchMove: false,
+		slidesPerView: 5,
+		speed: 6000,
+		autoplay: {
+		  delay: 1,
+		  disableOnInteraction: true,
+		},
+		breakpoints: {
+			'1400': {
+				slidesPerView: 5,
+			},
 			'1200': {
 				slidesPerView: 4,
 			},
@@ -1040,6 +1121,222 @@
 			});
 		});
 	}
+
+	$(document).ready(function () {
+		$(".tp-filter-d").on("click", function () {
+			$(".tp-filter-dropdown-wrapper-2").slideToggle(300);
+		});
+	});
+	
+	////////////////////////////////////////
+	// 29. tp-testimonial-yoga-active
+	var slider = new Swiper('.tp-testimonial-yoga-active', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		navigation: {
+			nextEl: ".tp-testimonial-yoga-next",
+			prevEl: ".tp-testimonial-yoga-prev",
+		},
+	});
+
+	////////////////////////////////////////
+	// 30. tp-classes-yoga-active
+
+	var slider = new Swiper('.tp-classes-yoga-active', {
+		slidesPerView: 4,
+		spaceBetween: 27,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		breakpoints: {
+			'1400': {
+				slidesPerView: 4,
+			},
+			'1200': {
+				slidesPerView: 3,
+			},
+			'992': {
+				slidesPerView: 3,
+			},
+			'768': {
+				slidesPerView: 2,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
+
+	//////////////////////////////////
+	// 31. Mouse Custom Cursor
+	function tpCursor() {
+		var myCursor = $(".mouseCursor");
+		if (myCursor.length) {
+			if ($("body").length > 0) {
+				const $cursorInner = $(".cursor-inner");
+				const $cursorOuter = $(".cursor-outer");
+			
+				let mouseX = 0, 
+					mouseY = 0, 
+					isMoving = false;
+			
+				$(window).on("mousemove", function (event) {
+					if (!isMoving) {
+						$cursorOuter.css("transform", `translate(${event.clientX}px, ${event.clientY}px)`);
+						$cursorInner.css("transform", `translate(${event.clientX}px, ${event.clientY}px)`);
+						mouseX = event.clientX;
+						mouseY = event.clientY;
+					}
+				});
+			
+				$("body").on("mouseenter", "button, a, .cursor-pointer", function () {
+					$cursorInner.addClass("cursor-hover");
+					$cursorOuter.addClass("cursor-hover");
+				});
+			
+				$("body").on("mouseleave", "button, a, .cursor-pointer", function () {
+					if (!$(this).is("a, button") || !$(this).closest(".cursor-pointer").length) {
+						$cursorInner.removeClass("cursor-hover");
+						$cursorOuter.removeClass("cursor-hover");
+					}
+				});
+			
+				$cursorInner.css("visibility", "visible");
+				$cursorOuter.css("visibility", "visible");
+			}
+		}
+	}
+	tpCursor();
+
+	$(".tp-cursor-point-area").on("mouseenter", function () {
+		$(".mouseCursor").addClass("cursor-big");
+	}).on("mouseleave", function(){
+		$(".mouseCursor").removeClass("cursor-big");
+	});
+
+	$(".tp-linksa").on("mouseenter", function () {
+		$(".mouseCursor").addClass("cursor-hidden");
+	}).on("mouseleave", function(){
+		$(".mouseCursor").removeClass("cursor-hidden");
+	});
+
+	////////////////////////////////////////////////////
+	// 32. Parallax Js
+	if ($('.scene').length > 0) {
+		$('.scene').parallax({
+			scalarX: 5.0,
+			scalarY: 5.0,
+		});
+	};
+	if ($('.scene-y').length > 0) {
+		$('.scene-y').parallax({
+			scalarY: 5.0,
+			scalarX: 0,
+		});
+	};
+
+    ////////////////////////////////////////////////////
+	// 33. tp-brands-3-slider-active
+    var tp_brand_slide = new Swiper(".tp-brands-chef-slider-active", {
+        loop: true,
+        freemode: true,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        centeredSlides: true,
+        allowTouchMove: false,
+        speed: 4000,
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: true,
+        },
+    });
+
+    ////////////////////////////////////////////////////
+	// 34. tp-courses-chef-active
+
+	var tp_courses_slider = new Swiper('.tp-courses-chef-active', {
+		slidesPerView: 3,
+		spaceBetween: 27,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		pagination: {
+			el: ".tp-courses-chef-dot",
+			clickable: true,
+		  },
+		breakpoints: {
+			'1400': {
+				slidesPerView: 3,
+			},
+			'1200': {
+				slidesPerView: 3,
+			},
+			'992': {
+				slidesPerView: 2,
+			},
+			'768': {
+				slidesPerView: 2,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+	});
+
+	////////////////////////////////////////
+	// 35. tp-testimonial-chef-active
+	var slider = new Swiper('.tp-testimonial-chef-active', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		loop: true,
+		speed:1000,
+		pagination: {
+			el: ".tp-testimonial-chef-dot",
+			clickable: true,
+		  },
+	});
+
+    ////////////////////////////////////////////////////
+	// 36. tp-brands-quran-slider-active
+    var tp_brand_slide = new Swiper(".tp-brands-quran-slider-active", {
+        loop: false,
+        freemode: true,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        speed: 4000,
+		breakpoints: {
+			'1400': {
+				slidesPerView: 8,
+			},
+			'1200': {
+				slidesPerView: 6,
+			},
+			'992': {
+				slidesPerView: 5,
+			},
+			'768': {
+				slidesPerView: 4,
+			},
+			'576': {
+				slidesPerView: 2,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+    });
 
 
 })(jQuery);

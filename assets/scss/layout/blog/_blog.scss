@@ -2,6 +2,7 @@
 /*----------------------------------------*/
 /*  5.4 Blog css
 /*----------------------------------------*/
+
 .#{$theme-prifix}-blog {
     &-item {
         background-color: var(--tp-common-white);
@@ -167,6 +168,29 @@
         }
     }
 }
+
+
+.#{$theme-prifix}-blog-6{
+    &-item{
+        & .tp-blog-stories{
+            &-item{
+                border-radius: 14px;
+                border: 1px solid rgba(3, 31, 66, 0.10);
+            }
+            &-content{
+                padding: 24px 30px 35px;
+            }
+            &-title{
+                & a{
+                    &:hover{
+                        color: var(--tp-theme-9);
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 .#{$theme-prifix}-blog-stories {

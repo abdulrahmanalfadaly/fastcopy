@@ -324,3 +324,94 @@
         }
     }
 }
+
+.#{$theme-prifix}-testimonial {
+    &-6{
+        &-item{
+            padding: 40px;
+            border-radius: 14px;
+            background: var(--tp-common-white);
+            box-shadow: 0px 1px 3px 0px rgba(3, 31, 66, 0.14);
+            &-shape{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            &-title{
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                color: var(--tp-theme-9);
+                font-family: var(--tp-ff-manrope);
+            }
+            &-content{
+                margin-bottom: 40px;
+                & p{
+                    font-weight: 500;
+                    color: #636366;
+                    font-family: var(--tp-ff-manrope);
+                }
+            }
+            &-user{
+                &-thumb{
+                    margin-right: 15px;
+                    & img{
+                        width: 60px;
+                    }
+                }
+                &-content{
+                    & p{
+                        margin: 0;
+                        line-height: 1;
+                        font-weight: 600;
+                        color: var(--tp-common-black);
+                        font-family: var(--tp-ff-manrope);
+                    }
+                    & span{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #636366;
+                        font-family: var(--tp-ff-manrope);
+                    }
+                }
+            }
+        }
+        &-wrapper{
+            overflow: hidden;
+            &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 240px;
+                z-index: 2;
+                background-image: linear-gradient(90deg, #F8F8FA 18%, rgba(248, 248, 250, 0.00) 106%);
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 240px;
+                z-index: 2;
+                background-image: linear-gradient(270deg, #F8F8FA 18%, rgba(248, 248, 250, 0) 106%);
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+        &-active{
+            margin: 0 -100px;
+        }
+    }
+}
+
+.slide-transtion {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}

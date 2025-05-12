@@ -976,11 +976,18 @@
             &-title{
                 font-size: 18px;
                 font-weight: 600;
-                margin-bottom: 5px;
+                margin-bottom: 3px;
                 color: var(--tp-heading-2);
                 & a{
                     &:hover{
                         color: var(--tp-theme-secondary);
+                    }
+                }
+                &.color-9{
+                    & a{
+                        &:hover{
+                            color: var(--tp-theme-9);
+                        }
                     }
                 }
             }

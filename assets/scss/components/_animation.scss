@@ -490,6 +490,25 @@
   }
 }
 
+
+@keyframes tpupdown {
+	0% {
+	  -webkit-transform: translateY(0);
+	  -moz-transform: translateY(0);
+	  -ms-transform: translateY(0);
+	  -o-transform: translateY(0);
+	  transform: translateY(0);
+	}
+	100% {
+	  -webkit-transform: translateY(-20px);
+	  -moz-transform: translateY(-20px);
+	  -ms-transform: translateY(-20px);
+	  -o-transform: translateY(-20px);
+	  transform: translateY(-20px);
+	}
+
+}
+
 @keyframes morph{
   0%, 100% {
   border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;

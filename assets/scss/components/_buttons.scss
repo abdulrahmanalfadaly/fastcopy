@@ -146,6 +146,14 @@
 		& svg {
 			@include transform(translateY(-2px));
 		}
+		&.color-9{
+			border-color: var(--tp-theme-9);
+			background-color: var(--tp-theme-9);
+			&:hover{
+				color: var(--tp-theme-9);
+				background-color: transparent;
+			}
+		}
 	}
 	&-circle {
 		font-size: 16px;
@@ -194,6 +202,9 @@
 		&:hover{
 			box-shadow: none;
 			background: #425EFF;
+			color: var(--tp-common-white);
+		}
+		&:focus{
 			color: var(--tp-common-white);
 		}
 	}

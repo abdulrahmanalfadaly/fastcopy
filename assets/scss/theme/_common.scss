@@ -240,7 +240,9 @@
 		margin-top: var(--bs-gutter-y);
 	}
 }
-
+.tp-gx-27{
+	--bs-gutter-x: 27px;
+}
 /* gutter for x axis */
 .tp-gx-30{
 	--bs-gutter-x: 30px;
@@ -340,5 +342,22 @@
 	}
 	@media #{$xs} {
 		--bs-gutter-x: 15px;
+	}
+}
+@media (min-width: 1400px){
+	.custom-container {
+		max-width: 1424px;
+	}
+}
+
+@media (min-width: 1400px){
+	.custom-container-larg {
+		max-width: 1744px;
+	}
+}
+
+@media (min-width: 1400px){
+	.custom-container-1300 {
+		max-width: 1324px;
 	}
 }

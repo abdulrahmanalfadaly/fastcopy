@@ -523,6 +523,11 @@
         font-size: 22px;
         letter-spacing: -0.02em;
         color: var(--tp-theme-6);
+         &:hover{
+            & a{
+                color: var(--tp-theme-8);
+            }
+         }
         }
     }
     &-content{
